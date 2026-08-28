@@ -280,12 +280,12 @@ export default defineConfig({
         //====================================
         // AIO Test Reporter
         //====================================
-        [
-            'aiotests-playwright-reporter',
-            {
-                aioConfig: aioConfigDetails
-            }
-        ],
+    //  //   [
+    //    //     'aiotests-playwright-reporter',
+    //         {
+    //             aioConfig: aioConfigDetails
+    //         }
+    //     ],
 
         // ==========================================
         // QualityWatcher Reporter
