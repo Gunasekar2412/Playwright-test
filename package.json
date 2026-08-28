@@ -1,0 +1,33 @@
+{
+    "name": "bcic-test-automation",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "playwright test --project=login --project=eis --project=portal",
+        "test:dxp": "playwright test --project=eis-dxp",
+        "fetch:dxp-swagger": "node scripts/fetch-dxp-swagger.mjs",
+        "generate:dxp-types": "swagger2openapi specs/dxp-swagger-env15.json -o specs/dxp-openapi-env15.json && openapi-typescript specs/dxp-openapi-env15.json -o lib/dxp/types/dxp-api.d.ts",
+        "check:dxp-spec": "node scripts/check-dxp-spec.mjs"
+    },
+    "keywords": [],
+    "author": "Danuel Williams",
+    "license": "ISC",
+    "description": "Project for the development of the test Automation for BCIC for the EIS and Customer Portal Web Applications",
+    "devDependencies": {
+        "@faker-js/faker": "^10.0.0",
+        "@playwright/test": "^1.57.0",
+        "@types/node": "^22.19.17",
+        "dotenv": "^17.2.3",
+        "monocart-reporter": "^2.10.1",
+        "openapi-typescript": "^7.10.0",
+        "playwright-html-reporter": "^0.1.11",
+        "swagger2openapi": "^7.0.8"
+    },
+    "dependencies": {
+        "@qualitywatcher/playwright-reporter": "^0.0.5",
+        "aiotests-playwright-reporter": "^2.0.1",
+        "axios": "^1.17.0",
+        "pdf-parse": "^2.4.5"
+    }
+}
